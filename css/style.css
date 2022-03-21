@@ -90,7 +90,7 @@ section {
 }
 
 .container {
-    /* min-width: 1200px; */
+    min-width: 1200px;
 }
 
 /* Header */
@@ -151,6 +151,8 @@ header a:hover .tooltip-text {
 }
 
 #home .title h1 {
+    width: 500px;
+    height: 60px;
     font-size: 55px;
     margin-bottom: 15px;
     }
@@ -489,7 +491,6 @@ header a:hover .tooltip-text {
 /* Favorite */
 #favorite {
     background-color: #B58F94;
-    /* background-color: #7F879C; */
     position: relative;
     background-size: cover;
 }
@@ -571,7 +572,6 @@ header a:hover .tooltip-text {
 
 /* Goal */
 #goal {
-    background-color: goldenrod;
     background-image: url("../images/goal.jpg");
     background-size: cover;
 }
@@ -582,53 +582,85 @@ header a:hover .tooltip-text {
     padding: 100px;
 }
 
-#goal .goal_box .goal_detile {
+@keyframes show {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+#goal .goal_box .goal_detail {
     position: relative;
-    background-color: pink;
     margin-right: 30px;
 }
 
-#goal .goal_box .goal_detile:last-child {
+#goal .goal_box .goal_detail:last-child {
     margin-right: 0;
 }
 
-#goal .goal_box .goal_detile .goal_detaile_imgbox {
+#goal .goal_detail .goal_detaile_imgbox {
     width: 300px;
     height: 300px;
+    border-radius: 8px;
 }
 
-#goal .goal_box .goal_detile:nth-child(1) .goal_detaile_imgbox{
+#goal .goal_detail:hover .goal_detaile_imgbox:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.5);
+    opacity: .5;
+}
+
+#goal .goal_box .goal_detail:nth-child(1) .goal_detaile_imgbox{
     background-image: url("../images/level_up.gif");
     background-size: cover;
     background-position: center;
 
 }
 
-#goal .goal_box .goal_detile:nth-child(2) .goal_detaile_imgbox{
+#goal .goal_box .goal_detail:nth-child(2) .goal_detaile_imgbox{
     background-image: url("../images/fun.gif");
     background-size: 200% 107%;
 }
 
-#goal .goal_box .goal_detile:nth-child(3) .goal_detaile_imgbox{
+#goal .goal_box .goal_detail:nth-child(3) .goal_detaile_imgbox{
     background-image: url("../images/together.gif");
     background-size: cover;
 
 }
 
-#goal .goal_box .goal_detile .goal_detaile_imgbox img{
+#goal .goal_box .goal_detail .goal_detaile_imgbox img{
     width: 100%;
 }
 
-#goal .goal_box .goal_detile .goal_detaile_desc {
+#goal .goal_box .goal_detail .goal_detaile_desc {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
+    font-size: 1.1rem;
     font-weight: 600;
     line-height: 20px;
-    color: gold;
-    text-shadow:1px 1px 1px #000;
 }
 
 /* Contact */
@@ -651,6 +683,7 @@ header a:hover .tooltip-text {
 }
 
 #contact ul {
+    animation: goal_show 1s ease;
 }
 
 #contact ul li{
@@ -664,18 +697,6 @@ header a:hover .tooltip-text {
 
 #contact ul li:last-child{
     padding-right: 0;
-}
-
-@keyframes list_slide {
-    0%{
-        top: 0;
-        opacity: 0;
-    }
-
-    100%{
-        top: 100px;
-        opacity: 100;
-    } 
 }
 
 

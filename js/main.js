@@ -1,5 +1,4 @@
 
-
 // Home 텍스트 타이핑 효과
 const content = "Hello, I’m Jooyoung!";
 const text = document.querySelector(".title h1");
@@ -20,18 +19,45 @@ function typing(){
 setInterval(typing, 200)
 
 
-// About 스크롤에 반응하는 애니메이션
+// 스크롤에 반응하는 애니메이션
 let aboutCard = document.querySelector(".about_profile");
+
+let goalCard1 = document.querySelector(".goal_detail_1");
+let goalCard2 = document.querySelector(".goal_detail_2");
+let goalCard3 = document.querySelector(".goal_detail_3");
+
+let contact = document.querySelector("#contact .container")
 
 window.addEventListener("scroll", function(){
     let value = window.scrollY;
     console.log("scrollY", value);
     if (value < 400){
-        aboutCard.style.animation = "about_backslide 1s ease-out forwards";
+        aboutCard.style.animation = "about_backslide 0.5s ease-out forwards";
     } else {
-        aboutCard.style.animation = "about_slide 1s ease-out"
+        aboutCard.style.animation = "about_slide 0.5s ease-out"
+    };
+
+    if(value > 1950){
+        goalCard1.style.animation = "show 0.3s linear forwards";
+        goalCard2.style.animation = "show 0.8s linear forwards";
+        goalCard3.style.animation = "show 1.2s linear forwards";
+    } else{
+        goalCard1.style.animation = "out 0.3s linear forwards";
+        goalCard2.style.animation = "out 0.8s linear forwards";
+        goalCard3.style.animation = "out 1.2s linear forwards";
     }
+
+    if(value > 2700) {
+        contact.style.animation = "show 0.5s linear forwards";
+    } else {
+        contact.style.animation = "out 0.5s linear forwards";
+
+    }
+
 })
+
+
+
 
 
 // Favorite Slide
