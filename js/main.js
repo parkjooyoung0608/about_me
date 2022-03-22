@@ -26,11 +26,11 @@ let goalCard1 = document.querySelector(".goal_detail_1");
 let goalCard2 = document.querySelector(".goal_detail_2");
 let goalCard3 = document.querySelector(".goal_detail_3");
 
-let contact = document.querySelector("#contact .container")
+let contactTilte = document.querySelector("#contact .category h2");
+let contactLink = document.querySelector("#contact .link ul");
 
 window.addEventListener("scroll", function(){
     let value = window.scrollY;
-    console.log("scrollY", value);
     if (value < 400){
         aboutCard.style.animation = "about_backslide 0.5s ease-out forwards";
     } else {
@@ -47,18 +47,15 @@ window.addEventListener("scroll", function(){
         goalCard3.style.animation = "out 1.2s linear forwards";
     }
 
-    if(value > 2700) {
-        contact.style.animation = "show 0.5s linear forwards";
-    } else {
-        contact.style.animation = "out 0.5s linear forwards";
-
-    }
+    if(value > 2500) {
+        contactTilte.style.animation = "grow 0.8s linear";
+        contactLink.style.animation = "grow 0.8s linear";
+    } else{
+        contactTilte.style.animation = "grow-out 0.5s linear";
+        contactLink.style.animation = "grow-out 0.5s linear";
+    };
 
 })
-
-
-
-
 
 // Favorite Slide
 const slides = document.querySelector(".slides");

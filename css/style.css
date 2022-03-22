@@ -674,21 +674,29 @@ header a:hover .tooltip-text {
 }
 
 #contact .category {
-    padding-top: 0;
+    padding: 30px;
+    height: 1.3em;
+    overflow-y: hidden;
+    margin-bottom: 30px;
 }
 
 #contact .category h2 {
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin: 0;
+
 }
 
-#contact ul {
-    animation: goal_show 1s ease;
+#contact .link {
+    height: 1.5em;
+    overflow-y: hidden;
+}
+
+#contact .link ul {
+    /* animation: grow 1s infinite; */
+
 }
 
 #contact ul li{
     padding-right: 50px;
-    animation: list_slide 1s ease;
 }
 
 #contact ul li:hover{
@@ -699,6 +707,15 @@ header a:hover .tooltip-text {
     padding-right: 0;
 }
 
+@keyframes grow {
+    from { transform: translateY(1.5em) }
+    to { transform: translateY(0) }
+}
+
+@keyframes grow-out {
+    from { transform: translateY(0) }
+    to { transform: translateY(1.5em) }
+}
 
 
 /* Footer */
