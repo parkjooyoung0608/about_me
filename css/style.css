@@ -38,7 +38,7 @@ section {
 
 .category h2 {
     font-size: 3rem;
-    margin: 30px;
+    margin: 20px;
 }
 
 .desc {
@@ -154,7 +154,7 @@ header a:hover .tooltip-text {
     width: 500px;
     height: 60px;
     font-size: 55px;
-    margin-bottom: 15px;
+    margin-bottom: 1.3rem;
     }
 
 #home .title p{
@@ -377,7 +377,7 @@ header a:hover .tooltip-text {
 
 .property_box:nth-child(4){
     bottom: 40%;
-    left: 35%;
+    left: 30%;
     transform: rotate(-30deg);
 
 }
@@ -396,7 +396,7 @@ header a:hover .tooltip-text {
 
 .property_box:nth-child(7){
     top: 30%;
-    left: 30%;
+    left: 25%;
     transform: rotate(10deg);
 }
 
@@ -523,7 +523,7 @@ header a:hover .tooltip-text {
 }
 
 #favorite .slide_text_box .title {
-    font-size: 15px;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -585,8 +585,8 @@ header a:hover .tooltip-text {
 
 @keyframes out {
     0% {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
     100% {
         transform: translateY(200px);
@@ -617,7 +617,7 @@ header a:hover .tooltip-text {
     top: 0;
     bottom: 0;
     border-radius: 8px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     opacity: .5;
 }
 
@@ -630,7 +630,8 @@ header a:hover .tooltip-text {
 
 #goal .goal_box .goal_detail:nth-child(2) .goal_detaile_imgbox{
     background-image: url("../images/fun.gif");
-    background-size: 200% 107%;
+    background-size: 120% 100%;
+    background-position: center;
 }
 
 #goal .goal_box .goal_detail:nth-child(3) .goal_detaile_imgbox{
@@ -660,7 +661,6 @@ header a:hover .tooltip-text {
     justify-content: center;
     color: whitesmoke;
     background-color: #81829f;
-    /* background-image: radial-gradient( circle at top left, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.5) 100% ); */
 }
 
 #contact .category {
@@ -672,17 +672,11 @@ header a:hover .tooltip-text {
 
 #contact .category h2 {
     margin: 0;
-
 }
 
 #contact .link {
     height: 1.5em;
     overflow-y: hidden;
-}
-
-#contact .link ul {
-    /* animation: grow 1s infinite; */
-
 }
 
 #contact ul li{
